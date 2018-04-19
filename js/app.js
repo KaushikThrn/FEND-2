@@ -5,9 +5,17 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
+    this.x=0;
+    this.y=random()*83;
     this.sprite = 'images/enemy-bug.png';
 };
 
+var random=function () {
+  //generate a random numner between 1 and 4 to place the enemy entities on the stone blocks
+  var ran=Math.trunc(Math.random() * (4 - 1) + 1);
+  alert("random is "+ran);
+  return ran;
+}
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
@@ -25,7 +33,8 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-
+var allEnemies=[]
+allEnemies[0]= new Enemy();
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player

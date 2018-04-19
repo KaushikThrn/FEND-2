@@ -13,7 +13,6 @@ var Enemy = function() {
 var random=function () {
   //generate a random numner between 1 and 4 to place the enemy entities on the stone blocks
   var ran=Math.trunc(Math.random() * (4 - 1) + 1);
-  alert("random is "+ran);
   return ran;
 }
 // Update the enemy's position, required method for game

@@ -6,7 +6,7 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.x=0;
-    this.y=random()*83;
+    this.y=random()*75;
     this.speed=Math.trunc(Math.random() * 256+10);
     this.sprite = 'images/enemy-bug.png';
 };

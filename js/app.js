@@ -39,8 +39,8 @@ var checkEachCollision=function(enemy){
 }
 //check if the given values are in the range
 var range=function(par1,par2,par3,par4){
-        if((par1===par3)||(par2===par4)){
-            return false;
+        if((par1<=par4)||(par2<=par3)){
+            return true;
         }
 
 }

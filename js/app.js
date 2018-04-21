@@ -47,7 +47,7 @@ var range=function(par1,par2,par3,par4){
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y,101,160);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y,92,160);
 };
 
 // Now write your own player class

@@ -30,7 +30,7 @@ Enemy.prototype.update = function(dt) {
 };
 
 var checkEachCollision=function(enemy){
-    if(player.x)
+    
 
 }
 
@@ -54,12 +54,9 @@ var Player = function() {
 };
 
 Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y,101,171);
 };
 
-Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
 
 //function to move the player based on keypress
 Player.prototype.handleInput=function(keypressed){

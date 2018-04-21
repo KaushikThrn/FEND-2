@@ -25,7 +25,7 @@ Enemy.prototype.update = function(dt) {
     this.x=this.x+this.speed*dt;
     if(this.x>=505){
         this.x=0;
-        this.speed=Math.trunc(Math.random() * 256+10);
+        this.speed=20;
     }
 };
 

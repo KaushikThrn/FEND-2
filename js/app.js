@@ -52,6 +52,27 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+//function to move the player based on keypress
+Player.prototype.handleInput=function(keypressed){
+    if (keypressed == 'left') {
+        player.x -= 101;
+    }
+    if (keypressed == 'up') {
+        player.y -= 83;
+    }
+    if (keypressed == 'right') {
+        player.x += 101;
+    }
+    if (keypressed == 'down') {
+        player.y += 83;
+    }
+
+}
+
 var allEnemies=[]
 for(let i=0;i<=2;i++){
 var ememy=new Enemy();

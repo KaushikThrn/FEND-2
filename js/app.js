@@ -29,9 +29,14 @@ Enemy.prototype.update = function(dt) {
     }
 };
 
+var checkEachCollision=function(enemy){
+    if(player.x)
+
+}
+
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y,101,160);
 };
 
 // Now write your own player class

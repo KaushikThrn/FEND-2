@@ -6,7 +6,7 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.x=0;
-    this.y=random()*75;
+    this.y=random()*65;
     this.speed=Math.trunc(Math.random() * 256+10);
     this.sprite = 'images/enemy-bug.png';
 };
@@ -31,7 +31,7 @@ Enemy.prototype.update = function(dt) {
 
 var checkEachCollision=function(enemy){
     //console.log(player.x,player.x+101,enemy.x,enemy.x+101)
-    if(range(player.x,player.x+101,enemy.x,enemy.x+101,player.y,player.y+171,enemy.y,enemy.y+48))
+    if(range(player.x,player.x+101,enemy.x,enemy.x+70,player.y,player.y+171,enemy.y,enemy.y+48))
     {   
         player.x=202;
         player.y=380;
@@ -41,7 +41,7 @@ var checkEachCollision=function(enemy){
 var range=function(player_left,player_right,enemy_left,enemy_right,player_top,player_bottom,enemy_top,enemy_bottom){
     if(((enemy_right>=player_left)&&(player_right>=enemy_left))&&((player_bottom>=enemy_top)&&(enemy_bottom>=player_top))){
             //console.log(player_left,player_right,enemy_left,enemy_right,player_top,player_bottom,enemy_top,enemy_bottom);
-            console.log(player_top,enemy_bottom);
+            console.log(player_left,enemy_right);
             return true;
         }
 

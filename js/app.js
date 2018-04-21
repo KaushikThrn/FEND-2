@@ -31,15 +31,15 @@ Enemy.prototype.update = function(dt) {
 
 var checkEachCollision=function(enemy){
     console.log(player.x,player.x+101,enemy.x,enemy.x+101)
-    if(range(player.x,player.x+101,enemy.x,enemy.x+101))
+    if(range(player.x,player.x+101,enemy.x,enemy.x+101,player.y,player.y+171,enemy.y,enemy.y+83))
     {
         player.x=202;
         player.y=380;
     }
 }
 //check if the given values are in the range
-var range=function(par1,par2,par3,par4){
-        if((par1<=par4)||(par2<=par3)){
+var range=function(player_left,player_right,enemy_left,enemy_right,player_top,player_bottom,enemy_top,enemy_bottom){
+    if(((enemy_right>=player_left)||(player_right>=enemy_left))&&((player_bottom>=enemy_top)||(enemy_bottom>=player_top))){
             return true;
         }
 

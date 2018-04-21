@@ -79,7 +79,7 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        checkCollisions();
+        
     }
     
     function checkCollisions(){
@@ -142,6 +142,7 @@ var Engine = (function(global) {
         }
 
         renderEntities();
+        checkCollisions();
     }
 
     /* This function is called by the render function and is called on each game

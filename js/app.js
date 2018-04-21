@@ -89,7 +89,7 @@ Player.prototype.handleInput=function(keypressed){
 }
 
 var allEnemies=[]
-for(let i=0;i<=0;i++){
+for(let i=0;i<=2;i++){
 var ememy=new Enemy();
 allEnemies.push(ememy);
 }

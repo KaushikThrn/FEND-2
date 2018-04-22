@@ -7,7 +7,7 @@ var Enemy = function() {
     // a helper we've provided to easily load images
     this.x=0;
     this.y=random()*65;
-    this.speed=Math.trunc(Math.random() * 256+10);
+    this.speed=Math.trunc(Math.random() * 256+30);
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -25,7 +25,6 @@ Enemy.prototype.update = function(dt) {
     this.x=this.x+this.speed*dt;
     if(this.x>=505){
         this.x=0;
-        this.speed=20;
     }
 };
 
@@ -115,7 +114,6 @@ Player.prototype.handleInput=function(keypressed){
 
 }
 var score=0;
-$("#score").html("0");
 var allEnemies=[]
 for(let i=0;i<=2;i++){
 var ememy=new Enemy();

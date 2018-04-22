@@ -71,7 +71,7 @@ Player.prototype.render = function() {
 Player.prototype.update = function() {
     console.log(this.x,this.y);
     checkOutofCanvas();
-    //checkWin();
+    checkWin();
 };
 //check if the player is moving out of canvas
 var checkOutofCanvas=function(){
@@ -90,7 +90,14 @@ var checkOutofCanvas=function(){
     }
 }
 
-
+var checkWin=function(){
+    if(player.y===0){
+        player.x=202;
+        player.y=380;
+        score++;
+        $("#score").html(score);
+    }
+}
 //function to move the player based on keypress
 Player.prototype.handleInput=function(keypressed){
     if (keypressed == 'left') {
@@ -108,6 +115,7 @@ Player.prototype.handleInput=function(keypressed){
 
 }
 var score=0;
+$("#score").html("0");
 var allEnemies=[]
 for(let i=0;i<=2;i++){
 var ememy=new Enemy();

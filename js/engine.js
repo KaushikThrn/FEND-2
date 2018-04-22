@@ -28,6 +28,7 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
     $("body").append("<div>Score <span id='score'></span></div>");
+    $("#score").html("0");
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.

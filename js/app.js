@@ -68,6 +68,28 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y,101,171);
 };
 
+Player.prototype.update = function() {
+    console.log(this.x,this.y);
+    checkOutofCanvas();
+    //checkWin();
+};
+//check if the player is moving out of canvas
+var checkOutofCanvas=function(){
+    if(player.x>405){//if player moves out of right side of canvas
+        player.x=405;
+    }
+
+    else if(player.x<0){
+        player.x=0;
+    }
+    else if(player.y<0){
+        player.y=0;
+    }
+    else if(player.y>415){
+        player.y=415;
+    }
+}
+
 
 //function to move the player based on keypress
 Player.prototype.handleInput=function(keypressed){
@@ -85,7 +107,7 @@ Player.prototype.handleInput=function(keypressed){
     }
 
 }
-
+var score=0;
 var allEnemies=[]
 for(let i=0;i<=2;i++){
 var ememy=new Enemy();

@@ -40,8 +40,6 @@ var checkEachCollision=function(enemy){
 //check if the given values are in the range
 var range=function(player_left,player_right,enemy_left,enemy_right,player_top,player_bottom,enemy_top,enemy_bottom){
     if(((enemy_right>=player_left)&&(player_right>=enemy_left))&&((player_bottom>=enemy_top)&&(enemy_bottom>=player_top))){
-            //console.log(player_left,player_right,enemy_left,enemy_right,player_top,player_bottom,enemy_top,enemy_bottom);
-            console.log(player_right,enemy_left);
             return true;
         }
 
